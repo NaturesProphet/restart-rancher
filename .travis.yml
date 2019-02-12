@@ -1,0 +1,16 @@
+language: 
+- node_js
+- java
+node_js:
+- "node"
+dist: trusty
+addons:
+ sonarcloud:
+   organization: "$SONAR_ORGANIZATION"
+   token:
+     secure: "$SONAR_TOKEN"
+script:
+# instalar dependências
+- npm install
+# análise de qualidade de código
+- sonar-scanner

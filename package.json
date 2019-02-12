@@ -1,15 +1,42 @@
 {
-  "name": "rancher",
+  "name": "restart-rancher",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "a simple module made for restart a service on Rancher using his API",
+  "main": "./lib/index.js",
+  "bin": {
+    "restart-rancher": "bin/restart-rancher.js",
+    "release": "standard-version",
+    "commit": "git-cz"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Mateus Garcia - @NaturesProphet",
   "license": "ISC",
+  "preferGlobal": "true",
   "dependencies": {
     "request": "^2.88.0",
     "request-promise": "^4.2.2"
+  },
+  "devDependencies": {
+    "commitizen": "^3.0.5",
+    "cz-conventional-changelog": "^2.1.0",
+    "husky": "^1.3.1",
+    "standard-version": "^4.4.0",
+    "validate-commit-msg": "^2.14.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    },
+    "validate-commit-msg": {
+      "types": "conventional-commit-types",
+      "helpMessage": "Use \"npm run commit\" instead, we use conventional-changelog format :) (https://github.com/commitizen/cz-cli)"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "validate-commit-msg"
+    }
   }
 }
