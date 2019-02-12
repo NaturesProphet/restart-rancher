@@ -4,12 +4,12 @@
   "description": "a simple module made for restart a service on Rancher using his API",
   "main": "./lib/index.js",
   "bin": {
-    "restart-rancher": "bin/restart-rancher.js",
-    "release": "standard-version",
-    "commit": "git-cz"
+    "restart-rancher": "bin/restart-rancher.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release": "standard-version",
+    "commit": "git-cz"
   },
   "author": "Mateus Garcia - @NaturesProphet",
   "license": "ISC",
