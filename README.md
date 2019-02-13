@@ -11,20 +11,28 @@ you can add it to your node projects simple by typing:
 npm install restart-rancher --save
 ```
 
-# Configuration
-
-Set or parse this environment variables to get it ready:
-```bash
-PROJECT_ID
-SERVICE_ID
-RANCHER_SECRET_KEY
-RANCHER_ACCESS_KEY
-RANCHER_URL
-```
-
 # Usage
 
-just import it to the project at any part of the code!
+### import the module into your project
 ```bash
 const restart = require('restart-rancher');
 ```
+
+### declare your options object
+
+```bash
+const options = {
+    RANCHER_ACCESS_KEY: "your_rancher_access_key",
+    RANCHER_SECRET_KEY: "your_rancher_secret_key",
+    PROJECT_ID: "your_project_id",
+    SERVICE_ID: "your_serviceId",
+    RANCHER_URL: "the API URL of you rancher server"
+}
+```
+
+### And now, you can restart your rancher service just like this:
+
+```bash
+restart(options);
+```
+
