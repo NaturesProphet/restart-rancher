@@ -7,13 +7,13 @@
     "restart-rancher": "bin/restart-rancher.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
+    "test:cov": "jest --coverage",
     "release": "standard-version",
     "commit": "git-cz"
   },
   "author": "Mateus Garcia - @NaturesProphet",
   "license": "ISC",
-  "preferGlobal": "true",
   "dependencies": {
     "request": "^2.88.0",
     "request-promise": "^4.2.2"
@@ -22,6 +22,7 @@
     "commitizen": "^3.0.5",
     "cz-conventional-changelog": "^2.1.0",
     "husky": "^1.3.1",
+    "jest": "^24.1.0",
     "standard-version": "^4.4.0",
     "validate-commit-msg": "^2.14.0"
   },
@@ -38,5 +39,16 @@
     "hooks": {
       "commit-msg": "validate-commit-msg"
     }
+  },
+  "jest": {
+    "collectCoverage": true,
+    "verbose": true,
+    "collectCoverageFrom": [
+      "**/*.{js, jsx}",
+      "!**/node_modules/**",
+      "!**/bin/**",
+      "!**/coverage/**",
+      "!**/.scannerwork/**"
+    ]
   }
 }

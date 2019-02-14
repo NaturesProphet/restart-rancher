@@ -12,5 +12,8 @@ addons:
 script:
 # instalar dependências
 - npm install
+# Testes
+- npm run test
+- npm run test:cov
 # análise de qualidade de código
 - sonar-scanner
