@@ -13,14 +13,13 @@ npm install restart-rancher --save
 
 # Usage
 
-### import the module into your project
-```bash
-const restart = require('restart-rancher');
-```
-
-### declare your options object
+Follow this example:
 
 ```bash
+// import the module
+const restartRancher = require('restart-rancher');
+
+// configure your options with all the fields below
 const options = {
     RANCHER_ACCESS_KEY: "your_rancher_access_key",
     RANCHER_SECRET_KEY: "your_rancher_secret_key",
@@ -28,11 +27,7 @@ const options = {
     SERVICE_ID: "your_serviceId",
     RANCHER_URL: "the API URL of you rancher server"
 }
+
+// and simple run the function, parsing the options above
+restartRancher(options);
 ```
-
-### And now, you can restart your rancher service just like this:
-
-```bash
-restart(options);
-```
-
