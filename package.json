@@ -12,6 +12,17 @@
     "release": "standard-version",
     "commit": "git-cz"
   },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:NaturesProphet/restart-rancher.git"
+  },
+  "keywords": [
+    "rancher",
+    "restart",
+    "docker",
+    "restart-rancher",
+    "Garcia"
+  ],
   "author": "Mateus Garcia - @NaturesProphet",
   "license": "ISC",
   "dependencies": {
